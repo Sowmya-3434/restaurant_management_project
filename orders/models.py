@@ -10,11 +10,11 @@ class Order(models.Model):
         ('CANCELLED', 'Cancelled'),
     ]
 
-customer = models.ForeignKey(User, on_delete =models.CASCADE)
-Menu_item = models.ForeignKey(Menu, on_delete=models.CASCADE)
+customer = models.ForeignKey(User, on_delete =models.CASCADE, related_name='orders')
+menu_item = models.ForeignKey(Menu, on_delete=models.CASCADE, related_name='orders')
 quantity = models.positiveIntegerField()
 total_amount = models.DecimalField(max_digits=10, decimal_places=2)
-status = models.CharField(max_length=10, choices=STATUS_CHOICES, default='PENDING')
+status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='PENDING')
 created_at = models.DateTimeField(auto_now_add=True)
 
 def __str__(self):
