@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reservations</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <h1>Reservations page</h1>
+    <p>This is a placeholder for the Reservations page.</p>
+
+    <form>
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name"><br><br>
+
+        <label for="date">Date:</label><br>
+        <input type="date" id="date" name="date"><br><br>
+
+        <label for="time">Time:</label><br>
+        <input type="time" id="time" name="time"><br><br>
+
+        <input type="submit" value="Reserve">
+    </form>
+</body>
+</html>
