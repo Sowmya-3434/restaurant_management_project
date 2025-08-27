@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Home - Our Restaurant</title>
+    <title>{{ restaurant_name}}</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <style>
         body {
@@ -39,31 +39,7 @@
     </style>
 </head>
 <body>
-    <img src="{% static 'images/logo.png' %}" alt="Restaurant Logo" class="logo">
-    <header>
-        <h1> Welcome to Our Restaurant</h1>
-    </header>
-
-    <p>We are glad to serve you delicious food made with love!</p>
-    <h3>Contact Us: {{ phone }}</h3>
-
-    <footer>
-        <p>&copy; {{ now.year }} Our Restaurant. All Rights Reserved.</p>
-        <p class="hours">Opening Hours: Mon-Fri: 11am-9pm | Sat-Sun: 10am-10pm</p>
-    </footer>
-    <section id="location" style="margin: 30px; text-align: center;">
-        <h2>Our Location</h2>
-        <p> Address: 123 Main Street, Hyderabad, India</p>
-
-        <iframe
-           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.505733692367!2d78.48667141482305!3d17.38504448807039!2m3!1f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb978f8c5d9e25%aA0xdac8bdb7736b3b9a!2sHyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1692952294012!5m2!1sen!2sin"
-           width="600"
-           height="450"
-           style="border:0;"
-           allowfullscreen=""
-           loading="lazy">
-        </iframe>
-    </section>
+    <h1>Welcome to {{ restaurant_name }}</h1>
       
 </body>
 </html>
