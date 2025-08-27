@@ -1,11 +1,8 @@
+from django.conf import settings
 from django.shortcuts import render
 
-def contact_view(request):
-    if request.method == "POST":
-        name = request.POST.get('name')
-        email = request.POST.get('email')
-
-        return render(request, 'HTML_contact.html', {
-            'message': f"Thank you {name}, we received your email: {email}"
-        })
-    return render(request, 'HTML_contact.html')
+def home(request):
+    context = {
+        "restaurant_name": settings.RESTAURANT_NAME
+    }
+    return render(request, "home.html", context)
