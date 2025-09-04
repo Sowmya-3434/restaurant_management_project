@@ -1,8 +1,7 @@
-from django.conf import settings
 from django.shortcuts import render
+from .models import restaurant_name
 
 def home(request):
-    context = {
-        "restaurant_name": settings.RESTAURANT_NAME
-    }
-    return render(request, "home.html", context)
+    restaurant = Restauarnt.objects.first(
+        return render(request, 'HTML_home.html', {'restaurant': restaurant})
+    )
