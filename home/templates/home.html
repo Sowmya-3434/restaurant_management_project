@@ -40,9 +40,18 @@
 </head>
 <body>
 <header>
-    <h1>{{ restaurant.name }}</h1>
-    <p>{{ restaurant.address }}</p>
+    <h1>Our Menu</h1>
 </header>
+{% for item in items %}
+    <div class="menu-item">
+        <h3>{{ item.name }}</h3>
+        <p>{{ item.description }}</p>
+        <p><strong>price:</strong> {{ item.price }}</p>
+        {% if item.image %}
+            <img src="{{ item.image.url }}" alt="{{ item.name }}">
+        {% endif %}
+    </div>
+{% endfor %}
       
 </body>
 </html>
