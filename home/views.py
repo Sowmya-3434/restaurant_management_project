@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from .models import restaurant_name
 
-def home(request):
-    restaurant = Restauarnt.objects.first(
-        return render(request, 'HTML_home.html', {'restaurant': restaurant})
+def menu(request):
+    items = MenuItem.objects.all(
+    return render(request, 'HTML_menu.html', {'items': items})
     )
