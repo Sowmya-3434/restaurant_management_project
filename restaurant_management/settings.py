@@ -129,3 +129,6 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 RESTAURANT_NAME = "My Restaurant"
 RESTAURANT_PHONE = "+91-9876543210"
+import os
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.jpin(BASE_DIR, 'media')
