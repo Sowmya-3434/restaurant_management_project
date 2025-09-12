@@ -11,6 +11,9 @@
             <h2>{{ item.name }}</h2>
             <p>{{ item.description }}</p>
             <p>price: &#8377,{{ item.price }}</p>
+            {% if item.image %}
+                 <img src="{{ item.image.url }}" alt="{{ item.name }}" width="200">
+            {% endif %}
         </div>
     {% empty %}
         <p>No menu items available yet,</p>
