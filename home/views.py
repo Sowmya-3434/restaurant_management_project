@@ -1,7 +1,7 @@
-from django.shortcuts import render
-from .models import restaurant_name
+from rest_framework import generics
+from .models import MenuCategory
+from .serializers import MenuCategorySerializer
 
-def menu(request):
-    items = MenuItem.objects.all(
-    return render(request, 'HTML_menu.html', {'items': items})
-    )
+class MenuCategoryListView(generics.ListAPIView):
+    queryset = MenuCategory.objects.all()
+    serializer_class = MenuCategorySerializer
