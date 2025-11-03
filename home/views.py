@@ -1,7 +1,10 @@
 from rest_framework import generics
-from .models import MenuCategory
-from .serializers import MenuCategorySerializer
+from .models import MenuItem
+from .serializers import MenuItemSerializer
 
-class MenuCategoryListView(generics.ListAPIView):
-    queryset = MenuCategory.objects.all()
-    serializer_class = MenuCategorySerializer
+class FeaturedMenuItemsView(generics.ListAPIView):
+    serializer_class = MenuItemSerializer
+
+    def get_queryset(self):
+        return MenuItem.objects.filter(is_featured=True)
+
