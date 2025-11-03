@@ -1,8 +1,7 @@
 from django.urls import path
-from . import views
+from . import FeaturedMenuItemsView
 
 urlpatterns = [
-    path('feedback/', views.feedback_view, name='feedback'),
-    path('menu-categories/', views.MenuCategoryListView.as_view(), name='menu-categories'),
+    path('featured-items/',FeaturedMenuItemsView.as_view(), name='featured-items'),
     
 ]
